@@ -1,5 +1,5 @@
 // ВСТАВЬТЕ СЮДА адрес почты, на который должны приходить заявки.
-const RECEIVER_EMAIL = "YOUR_EMAIL@example.com";
+const RECEIVER_EMAIL = "marselceremisin51@gmail.com";
 
 const form = document.querySelector("#contact-form");
 const statusMessage = document.querySelector("#form-status");
