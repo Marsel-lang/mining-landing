@@ -73,15 +73,15 @@ let lastFocusedElement = null;
 function openContactModal() {
   if (contactModal.classList.contains("is-open")) return;
   lastFocusedElement = document.activeElement;
-  contactModal.classList.add("is-open");
   contactModal.setAttribute("aria-hidden", "false");
+  contactModal.classList.add("is-open");
   document.body.classList.add("modal-open");
   contactModal.querySelector(".contact-modal-close").focus();
 }
 
 function closeContactModal() {
-  contactModal.classList.remove("is-open");
   contactModal.setAttribute("aria-hidden", "true");
+  contactModal.classList.remove("is-open");
   document.body.classList.remove("modal-open");
   if (lastFocusedElement) lastFocusedElement.focus();
 }
