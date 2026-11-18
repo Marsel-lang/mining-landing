@@ -22,23 +22,29 @@ form.addEventListener("submit", async (event) => {
   statusMessage.className = "form-status";
 
   try {
+    const formData = Object.fromEntries(new FormData(form).entries());
     const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(RECEIVER_EMAIL)}`, {
       method: "POST",
-      body: new FormData(form),
-      headers: { "Accept": "application/json" }
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
     });
 
     const result = await response.json();
 
-    if (!response.ok || result.success === "false" || result.success === false) {
-      throw new Error(result.message || "Не удалось отправить форму.");
+    if (!response.ok || String(result.success) !== "true") {
+      throw new Error(result.message || `Ошибка сервиса (HTTP ${response.status}).`);
     }
 
     statusMessage.textContent = "Спасибо! Заявка отправлена. Мы скоро свяжемся с вами.";
     statusMessage.className = "form-status success";
     form.reset();
   } catch (error) {
-    statusMessage.textContent = "Не получилось отправить заявку. Попробуйте ещё раз или свяжитесь с нами другим способом.";
+    statusMessage.textContent = error.message
+      ? `Не удалось отправить заявку: ${error.message}`
+      : "Не получилось отправить заявку. Попробуйте ещё раз или свяжитесь с нами другим способом.";
     statusMessage.className = "form-status error";
     console.error("Form submission error:", error);
   } finally {
