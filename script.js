@@ -62,3 +62,33 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+
+// Открытие и закрытие формы обратной связи
+const contactModal = document.querySelector("#contact-modal");
+const openContactButtons = document.querySelectorAll("[data-open-contact]");
+const closeContactButtons = document.querySelectorAll("[data-close-contact]");
+let lastFocusedElement = null;
+
+function openContactModal() {
+  lastFocusedElement = document.activeElement;
+  contactModal.classList.add("is-open");
+  contactModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  contactModal.querySelector(".contact-modal-close").focus();
+}
+
+function closeContactModal() {
+  contactModal.classList.remove("is-open");
+  contactModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  if (lastFocusedElement) lastFocusedElement.focus();
+}
+
+openContactButtons.forEach(button => button.addEventListener("click", openContactModal));
+closeContactButtons.forEach(button => button.addEventListener("click", closeContactModal));
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && contactModal.classList.contains("is-open")) {
+    closeContactModal();
+  }
+});
