@@ -81,33 +81,50 @@
     </section>
 
     <section class="contact-section" id="contacts">
-      <div class="contact-heading">
+      <div class="contact-copy">
         <div class="section-kicker">03 / КОНТАКТЫ</div>
-        <h2>Есть вопросы?<br><span>Давайте обсудим.</span></h2>
-        <p>Оставьте контактные данные — мы свяжемся с вами.</p>
+        <h2>Обсудим ваш<br><span>проект?</span></h2>
+        <p>Расскажите, что вас интересует. Ответим на вопросы и поможем подобрать подходящее решение.</p>
+        <button class="contact-open-button" type="button" data-open-contact>
+          Оставить заявку <span aria-hidden="true">↗</span>
+        </button>
       </div>
-
-      <form class="contact-form" id="contact-form">
-        <h2>Оставить контактные данные</h2>
-        <label for="fullname">ФИО</label>
-        <input id="fullname" name="ФИО" type="text" placeholder="Иван Иванов" autocomplete="name" required minlength="2">
-        <label for="phone">Номер телефона</label>
-        <input id="phone" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
-        <label for="email">Почта</label>
-        <input id="email" name="Email" type="email" placeholder="name@example.com" autocomplete="email" required>
-        <label for="message">Оставить сообщение</label>
-        <textarea id="message" name="Сообщение" rows="4" placeholder="Расскажите, чем мы можем помочь..."></textarea>
-
-        <!-- Honeypot: скрытое поле для простых антиспам-ботов. -->
-        <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="_subject" value="Новая заявка с сайта">
-        <input type="hidden" name="_template" value="table">
-
-        <button class="submit-button" type="submit">Отправить <span aria-hidden="true">→</span></button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        <p class="privacy-note">Нажимая «Отправить», вы соглашаетесь на обработку указанных данных для ответа на обращение.</p>
-      </form>
+      <div class="contact-side">
+        <span class="contact-side-line"></span>
+        <p>Есть идея или вопрос?</p>
+        <span>Давайте начнём с разговора.</span>
+      </div>
     </section>
+
+    <div class="contact-modal" id="contact-modal" aria-hidden="true">
+      <div class="contact-modal-backdrop" data-close-contact></div>
+      <div class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <button class="contact-modal-close" type="button" aria-label="Закрыть форму" data-close-contact>×</button>
+        <div class="section-kicker">СВЯЗАТЬСЯ С НАМИ</div>
+        <h2 id="contact-modal-title">Оставить <span>заявку</span></h2>
+        <p class="modal-description">Заполните форму, и мы свяжемся с вами.</p>
+
+        <form class="contact-form" id="contact-form">
+          <label for="fullname">Ваше имя</label>
+          <input id="fullname" name="ФИО" type="text" placeholder="Как к вам обращаться?" autocomplete="name" required minlength="2">
+          <label for="phone">Номер телефона</label>
+          <input id="phone" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          <label for="email">Электронная почта</label>
+          <input id="email" name="Email" type="email" placeholder="name@example.com" autocomplete="email" required>
+          <label for="message">Чем можем помочь?</label>
+          <textarea id="message" name="Сообщение" rows="3" placeholder="Коротко опишите ваш вопрос..."></textarea>
+
+          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Новая заявка с сайта">
+          <input type="hidden" name="_template" value="table">
+
+          <button class="submit-button" type="submit">Отправить заявку <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="privacy-note">Нажимая «Отправить заявку», вы соглашаетесь на обработку указанных данных для ответа на обращение.</p>
+        </form>
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">
