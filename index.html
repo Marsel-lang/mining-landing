@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Современные решения для эффективного и стабильного майнинга криптовалют.">
+  <meta name="theme-color" content="#080706">
+  <title>Майнинг без лишних сложностей</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <header class="site-header">
+          <a class="brand-mark" href="#top" aria-label="На главную">
+            <span></span><span></span><span></span>
+          </a>
+          <nav class="main-nav" aria-label="Главная навигация">
+            <a href="#about">О нас</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#contacts">Контакты</a>
+          </nav>
+          <a class="join-button" href="#contacts">Присоединиться</a>
+          <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </header>
+
+        <div class="mobile-menu" hidden>
+          <a href="#about">О нас</a>
+          <a href="#advantages">Преимущества</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">МИР МАЙНИНГА — ПРОЩЕ, ЧЕМ КАЖЕТСЯ</p>
+          <h1>Майнинг<br>без лишних<br><span>сложностей</span></h1>
+          <p class="hero-description">Современные решения для эффективного<br class="desktop-break"> и стабильного майнинга криптовалют</p>
+          <a class="primary-button" href="#about">Узнать больше <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-bottom-note">ТЕХНОЛОГИИ · НАДЁЖНОСТЬ · РЕЗУЛЬТАТ</div>
+      </div>
+    </section>
+
+    <section class="intro content-section" id="about">
+      <div class="section-kicker">01 / О НАС</div>
+      <div class="section-content">
+        <h2>Майнинг без лишних<br><span>сложностей.</span></h2>
+        <p>Помогаем разобраться в майнинге криптовалют и подобрать решения, которые подходят именно под ваши задачи. Понятный подход, современные технологии и внимание к деталям.</p>
+      </div>
+    </section>
+
+    <section class="advantages content-section" id="advantages">
+      <div class="section-kicker">02 / ПРЕИМУЩЕСТВА</div>
+      <div class="section-content">
+        <h2>Всё необходимое<br>для уверенного старта</h2>
+        <div class="advantage-grid">
+          <article class="advantage-card">
+            <span class="card-number">01</span>
+            <h3>Понятный подход</h3>
+            <p>Объясняем сложные технические вещи простым языком.</p>
+          </article>
+          <article class="advantage-card">
+            <span class="card-number">02</span>
+            <h3>Практичные решения</h3>
+            <p>Помогаем подобрать оборудование и оценить условия майнинга.</p>
+          </article>
+          <article class="advantage-card">
+            <span class="card-number">03</span>
+            <h3>Поддержка</h3>
+            <p>Остаёмся на связи и помогаем двигаться дальше.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacts">
+      <div class="contact-heading">
+        <div class="section-kicker">03 / КОНТАКТЫ</div>
+        <h2>Есть вопросы?<br><span>Давайте обсудим.</span></h2>
+        <p>Оставьте контактные данные — мы свяжемся с вами.</p>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <h2>Оставить контактные данные</h2>
+        <label for="fullname">ФИО</label>
+        <input id="fullname" name="ФИО" type="text" placeholder="Иван Иванов" autocomplete="name" required minlength="2">
+        <label for="phone">Номер телефона</label>
+        <input id="phone" name="Телефон" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        <label for="email">Почта</label>
+        <input id="email" name="Email" type="email" placeholder="name@example.com" autocomplete="email" required>
+        <label for="message">Оставить сообщение</label>
+        <textarea id="message" name="Сообщение" rows="4" placeholder="Расскажите, чем мы можем помочь..."></textarea>
+
+        <!-- Honeypot: скрытое поле для простых антиспам-ботов. -->
+        <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Новая заявка с сайта">
+        <input type="hidden" name="_template" value="table">
+
+        <button class="submit-button" type="submit">Отправить <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="privacy-note">Нажимая «Отправить», вы соглашаетесь на обработку указанных данных для ответа на обращение.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#top">MINING<span>.</span></a>
+    <p>Современные решения для майнинга криптовалют</p>
+    <a href="#contacts">Связаться с нами <span aria-hidden="true">↗</span></a>
+    <small>© <span id="year"></span> Все права защищены</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
