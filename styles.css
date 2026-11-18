@@ -184,6 +184,7 @@ button, input, textarea { font: inherit; }
 .contact-side p { color: #f4f0eb; font-size: 19px; font-weight: 600; margin: 0 0 8px; }
 .contact-side > span:last-child { color: var(--muted); font-size: 13px; }
 .contact-modal {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -197,6 +198,7 @@ button, input, textarea { font: inherit; }
   transition: opacity .22s ease, visibility .22s ease;
 }
 .contact-modal.is-open {
+  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -288,3 +290,7 @@ body.modal-open { overflow: hidden; }
   .contact-modal { padding: 12px; }
   .contact-modal-dialog { padding: 34px 22px 25px; max-height: 94vh; }
 }
+
+/* Надёжное скрытие формы до нажатия на кнопку */
+.contact-modal[aria-hidden="true"] { display: none; }
+.contact-modal[aria-hidden="false"] { display: flex; }
