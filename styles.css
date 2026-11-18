@@ -19,7 +19,7 @@ button, input, textarea { font: inherit; }
 }
 .hero-art {
   position: absolute; z-index: -2; inset: 110px 0 0 22%;
-  background: url("assets/rocket-moon.jpg") center 53% / cover no-repeat;
+  background: url("assets/rocket-moon.png") center 53% / cover no-repeat;
   opacity: .96;
 }
 .hero-shade {
