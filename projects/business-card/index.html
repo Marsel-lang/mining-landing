@@ -9,7 +9,7 @@
 body{margin:0;background:#111;color:#f2eee9;font:16px Arial,sans-serif;line-height:1.65}
 main{width:min(900px,100%);margin:auto;padding:56px 24px 72px}
 .label{color:#ed7936;font-size:12px;letter-spacing:2.5px;font-weight:bold}
-h1{font-size:clamp(42px,8vw,68px);line-height:1.05;margin:18px 0}
+h1{font-size:clamp(42px,8vw,68px);line-height:1.05;margin:18px 0}.hero{display:flex;align-items:center;gap:30px}.hero-photo{width:180px;height:220px;object-fit:cover;object-position:center 28%;border-radius:16px;border:1px solid #514137;flex-shrink:0}
 h2{font-size:23px;margin:0 0 16px}
 h3{font-size:17px;margin:0 0 8px}
 p{color:#bdb5ad;margin:0 0 14px}
@@ -24,15 +24,20 @@ a{color:#f18a4b;text-decoration:none}
 a:hover{text-decoration:underline}
 .note{font-size:13px;color:#8e857d}
 footer{border-top:1px solid #39332e;padding-top:22px;color:#8e857d;font-size:13px}
-@media(max-width:600px){main{padding:38px 18px 50px}.grid{grid-template-columns:1fr}.item{padding:17px}}
+@media(max-width:600px){main{padding:38px 18px 50px}.grid{grid-template-columns:1fr}.item{padding:17px}.hero{align-items:flex-start;gap:18px}.hero-photo{width:112px;height:145px;border-radius:12px}.intro{font-size:16px}}
 </style>
 </head>
 <body>
 <main>
 <header>
+<div class="hero">
+<img class="hero-photo" src="photo_2026-11-27_14-14-52.jpg" alt="Фотография Марселя">
+<div>
 <div class="label">ПОРТФОЛИО / ОБО МНЕ</div>
 <h1>Марсель</h1>
 <p class="intro">Студент направления «Информационные системы и программирование» и начинающий специалист в сфере веб-разработки. Получаю практический опыт, создавая сайты, интерфейсы и небольшие приложения — от идеи и структуры до готового проекта и публикации.</p>
+</div>
+</div>
 </header>
 
 <section>
