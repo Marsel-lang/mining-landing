@@ -11,7 +11,8 @@
 
 ### TTM UI Kit
 Дизайн-система TTM: цветовая палитра, типографика, кнопки, карточки, статусы и система отступов.
-- [Посмотреть проект](https://github.com/Marsel-lang/mining-landing/tree/main/ui-kit)
+- [Открыть UI Kit](https://marsel-lang.github.io/mining-landing/ui-kit/)
+- [Исходный код](https://github.com/Marsel-lang/mining-landing/tree/main/ui-kit)
 
 ### TTM Calculator
 Веб-калькулятор для оценки доходности ASIC-майнинга с учётом оборудования, электричества и комиссии пула.
